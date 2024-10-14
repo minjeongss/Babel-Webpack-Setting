@@ -113,13 +113,15 @@ module.exports = {
 
 ### main.js
 
-가장 첫 번째 줄에 Polyfill을 로드한다.
+가장 첫 번째 줄에 Polyfill을 로드한다. 이는 Webpack을 사용하지 않는 환경에서 실행하는 설정이다.
 
 ```js
 import "@babel/polyfill";
 ```
 
 ### webpack.config.js
+
+Webpack을 사용하는 환경이라면 entry에 Polyfill을 추가한다.
 
 ```js
 const path = require("path");
